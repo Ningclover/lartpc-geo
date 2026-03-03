@@ -1,0 +1,12 @@
+# Event 7: toward PhotonSensor ix=0,iy=0
+# Cathode dx=dy=4.9m → pitch=1.96m → sensor(0,0) centre at (-3920,-3920,0) mm
+# Sensor is embedded in cathode (z=0 in cathode coords).
+# Start 50 mm above cathode face: z=+55mm, aligned with sensor centre.
+/generator/kinematics/set gps
+/generator/add
+/gps/particle opticalphoton
+/gps/energy 9.6863 eV
+/gps/pos/type Point
+/gps/pos/centre -3920 -3920 55 mm
+/gps/polarization 1 0 0
+/gps/direction 0 0 -1

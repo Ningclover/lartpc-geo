@@ -1,0 +1,383 @@
+<?xml version="1.0" encoding="ASCII"?>
+<gdml xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://service-spi.web.cern.ch/service-spi/app/releases/GDML/schema/gdml.xsd">
+  <define>
+    <position unit="cm" name="PhotonSensor_ix0_iy0_pos" x="-392.00000000000006" y="-392.00000000000006" z="0.0"/>
+    <rotation unit="degree" name="PhotonSensor_ix0_iy0_rot" x="0" y="0" z="0"/>
+    <position unit="cm" name="PhotonSensor_ix0_iy1_pos" x="-392.00000000000006" y="-196.00000000000003" z="0.0"/>
+    <rotation unit="degree" name="PhotonSensor_ix0_iy1_rot" x="0" y="0" z="0"/>
+    <position unit="cm" name="PhotonSensor_ix0_iy2_pos" x="-392.00000000000006" y="0.0" z="0.0"/>
+    <rotation unit="degree" name="PhotonSensor_ix0_iy2_rot" x="0" y="0" z="0"/>
+    <position unit="cm" name="PhotonSensor_ix0_iy3_pos" x="-392.00000000000006" y="196.00000000000003" z="0.0"/>
+    <rotation unit="degree" name="PhotonSensor_ix0_iy3_rot" x="0" y="0" z="0"/>
+    <position unit="cm" name="PhotonSensor_ix0_iy4_pos" x="-392.00000000000006" y="392.00000000000006" z="0.0"/>
+    <rotation unit="degree" name="PhotonSensor_ix0_iy4_rot" x="0" y="0" z="0"/>
+    <position unit="cm" name="PhotonSensor_ix1_iy0_pos" x="-196.00000000000003" y="-392.00000000000006" z="0.0"/>
+    <rotation unit="degree" name="PhotonSensor_ix1_iy0_rot" x="0" y="0" z="0"/>
+    <position unit="cm" name="PhotonSensor_ix1_iy1_pos" x="-196.00000000000003" y="-196.00000000000003" z="0.0"/>
+    <rotation unit="degree" name="PhotonSensor_ix1_iy1_rot" x="0" y="0" z="0"/>
+    <position unit="cm" name="PhotonSensor_ix1_iy2_pos" x="-196.00000000000003" y="0.0" z="0.0"/>
+    <rotation unit="degree" name="PhotonSensor_ix1_iy2_rot" x="0" y="0" z="0"/>
+    <position unit="cm" name="PhotonSensor_ix1_iy3_pos" x="-196.00000000000003" y="196.00000000000003" z="0.0"/>
+    <rotation unit="degree" name="PhotonSensor_ix1_iy3_rot" x="0" y="0" z="0"/>
+    <position unit="cm" name="PhotonSensor_ix1_iy4_pos" x="-196.00000000000003" y="392.00000000000006" z="0.0"/>
+    <rotation unit="degree" name="PhotonSensor_ix1_iy4_rot" x="0" y="0" z="0"/>
+    <position unit="cm" name="PhotonSensor_ix2_iy0_pos" x="0.0" y="-392.00000000000006" z="0.0"/>
+    <rotation unit="degree" name="PhotonSensor_ix2_iy0_rot" x="0" y="0" z="0"/>
+    <position unit="cm" name="PhotonSensor_ix2_iy1_pos" x="0.0" y="-196.00000000000003" z="0.0"/>
+    <rotation unit="degree" name="PhotonSensor_ix2_iy1_rot" x="0" y="0" z="0"/>
+    <position unit="cm" name="PhotonSensor_ix2_iy2_pos" x="0.0" y="0.0" z="0.0"/>
+    <rotation unit="degree" name="PhotonSensor_ix2_iy2_rot" x="0" y="0" z="0"/>
+    <position unit="cm" name="PhotonSensor_ix2_iy3_pos" x="0.0" y="196.00000000000003" z="0.0"/>
+    <rotation unit="degree" name="PhotonSensor_ix2_iy3_rot" x="0" y="0" z="0"/>
+    <position unit="cm" name="PhotonSensor_ix2_iy4_pos" x="0.0" y="392.00000000000006" z="0.0"/>
+    <rotation unit="degree" name="PhotonSensor_ix2_iy4_rot" x="0" y="0" z="0"/>
+    <position unit="cm" name="PhotonSensor_ix3_iy0_pos" x="196.00000000000003" y="-392.00000000000006" z="0.0"/>
+    <rotation unit="degree" name="PhotonSensor_ix3_iy0_rot" x="0" y="0" z="0"/>
+    <position unit="cm" name="PhotonSensor_ix3_iy1_pos" x="196.00000000000003" y="-196.00000000000003" z="0.0"/>
+    <rotation unit="degree" name="PhotonSensor_ix3_iy1_rot" x="0" y="0" z="0"/>
+    <position unit="cm" name="PhotonSensor_ix3_iy2_pos" x="196.00000000000003" y="0.0" z="0.0"/>
+    <rotation unit="degree" name="PhotonSensor_ix3_iy2_rot" x="0" y="0" z="0"/>
+    <position unit="cm" name="PhotonSensor_ix3_iy3_pos" x="196.00000000000003" y="196.00000000000003" z="0.0"/>
+    <rotation unit="degree" name="PhotonSensor_ix3_iy3_rot" x="0" y="0" z="0"/>
+    <position unit="cm" name="PhotonSensor_ix3_iy4_pos" x="196.00000000000003" y="392.00000000000006" z="0.0"/>
+    <rotation unit="degree" name="PhotonSensor_ix3_iy4_rot" x="0" y="0" z="0"/>
+    <position unit="cm" name="PhotonSensor_ix4_iy0_pos" x="392.00000000000006" y="-392.00000000000006" z="0.0"/>
+    <rotation unit="degree" name="PhotonSensor_ix4_iy0_rot" x="0" y="0" z="0"/>
+    <position unit="cm" name="PhotonSensor_ix4_iy1_pos" x="392.00000000000006" y="-196.00000000000003" z="0.0"/>
+    <rotation unit="degree" name="PhotonSensor_ix4_iy1_rot" x="0" y="0" z="0"/>
+    <position unit="cm" name="PhotonSensor_ix4_iy2_pos" x="392.00000000000006" y="0.0" z="0.0"/>
+    <rotation unit="degree" name="PhotonSensor_ix4_iy2_rot" x="0" y="0" z="0"/>
+    <position unit="cm" name="PhotonSensor_ix4_iy3_pos" x="392.00000000000006" y="196.00000000000003" z="0.0"/>
+    <rotation unit="degree" name="PhotonSensor_ix4_iy3_rot" x="0" y="0" z="0"/>
+    <position unit="cm" name="PhotonSensor_ix4_iy4_pos" x="392.00000000000006" y="392.00000000000006" z="0.0"/>
+    <rotation unit="degree" name="PhotonSensor_ix4_iy4_rot" x="0" y="0" z="0"/>
+    <position unit="cm" name="WallTop_pos" x="0.0" y="0.0" z="499.9"/>
+    <rotation unit="degree" name="WallTop_rot" x="0" y="0" z="0"/>
+    <position unit="cm" name="WallBottom_pos" x="0.0" y="0.0" z="-499.9"/>
+    <rotation unit="degree" name="WallBottom_rot" x="0" y="0" z="0"/>
+    <position unit="cm" name="WallPosX_pos" x="499.9" y="0.0" z="0.0"/>
+    <rotation unit="degree" name="WallPosX_rot" x="0" y="0" z="0"/>
+    <position unit="cm" name="WallNegX_pos" x="-499.9" y="0.0" z="0.0"/>
+    <rotation unit="degree" name="WallNegX_rot" x="0" y="0" z="0"/>
+    <position unit="cm" name="WallPosY_pos" x="0.0" y="499.9" z="0.0"/>
+    <rotation unit="degree" name="WallPosY_rot" x="0" y="0" z="0"/>
+    <position unit="cm" name="WallNegY_pos" x="0.0" y="-499.9" z="0.0"/>
+    <rotation unit="degree" name="WallNegY_rot" x="0" y="0" z="0"/>
+    <position unit="cm" name="Cathode_pos" x="0.0" y="0.0" z="0.0"/>
+    <rotation unit="degree" name="Cathode_rot" x="0" y="0" z="0"/>
+    <position unit="cm" name="Detector_pos" x="0.0" y="0.0" z="0.0"/>
+    <rotation unit="degree" name="Detector_rot" x="0" y="0" z="0"/>
+    <matrix name="LiquidArgon_RINDEX_VALUE" coldim="2" values="0.009586 1.232 0.009786 1.232"/>
+    <matrix name="LiquidArgon_ABSLENGTH_VALUE" coldim="2" values="0.009586 10000.0 0.009786 10000.0"/>
+    <matrix name="LiquidArgon_RAYLEIGH_VALUE" coldim="2" values="0.009586 900.0 0.009786 900.0"/>
+    <position name="center"/>
+    <rotation name="identity"/>
+  </define>
+  <materials>
+    <element name="Elem_argon" Z="18" formula="Ar">
+      <atom value="39.948"/>
+    </element>
+    <element name="Elem_carbon" Z="6" formula="C">
+      <atom value="12.0107"/>
+    </element>
+    <element name="Elem_hydrogen" Z="1" formula="H">
+      <atom value="1.00791"/>
+    </element>
+    <element name="Elem_oxygen" Z="8" formula="O">
+      <atom value="15.999"/>
+    </element>
+    <element name="Elem_nitrogen" Z="7" formula="N">
+      <atom value="14.0671"/>
+    </element>
+    <element name="Elem_silicon" Z="14" formula="Si">
+      <atom value="28.0855"/>
+    </element>
+    <material name="Vacuum" formula="">
+      <D value="1e-25"/>
+      <fraction ref="Elem_nitrogen" n="0.78"/>
+      <fraction ref="Elem_oxygen" n="0.22"/>
+    </material>
+    <material name="LiquidArgon" formula="">
+      <D value="1.3954"/>
+      <fraction ref="Elem_argon" n="1.0"/>
+      <property name="RINDEX" ref="LiquidArgon_RINDEX_VALUE"/>
+      <property name="ABSLENGTH" ref="LiquidArgon_ABSLENGTH_VALUE"/>
+      <property name="RAYLEIGH" ref="LiquidArgon_RAYLEIGH_VALUE"/>
+    </material>
+    <material name="CathodeMaterial" formula="">
+      <D value="1.85"/>
+      <composite ref="Elem_carbon" n="22"/>
+      <composite ref="Elem_hydrogen" n="5"/>
+      <composite ref="Elem_oxygen" n="4"/>
+      <composite ref="Elem_nitrogen" n="1"/>
+    </material>
+    <material name="SensorMaterial" formula="">
+      <D value="2.329"/>
+      <fraction ref="Elem_silicon" n="1.0"/>
+    </material>
+    <material name="WallMaterial" formula="">
+      <D value="7.874"/>
+      <fraction ref="Elem_carbon" n="0.001"/>
+      <fraction ref="Elem_silicon" n="0.999"/>
+    </material>
+  </materials>
+  <solids>
+    <box name="PhotonSensor_shape" lunit="cm" x="50.0" y="50.0" z="1.0"/>
+    <box name="Cathode_shape" lunit="cm" x="980.0000000000001" y="980.0000000000001" z="2.0"/>
+    <box name="Detector_shape" lunit="cm" x="1000.0" y="1000.0" z="1000.0"/>
+    <box name="WallTop_shape" lunit="cm" x="1000.0" y="1000.0" z="0.2"/>
+    <box name="WallBottom_shape" lunit="cm" x="1000.0" y="1000.0" z="0.2"/>
+    <box name="WallPosX_shape" lunit="cm" x="0.2" y="1000.0" z="1000.0"/>
+    <box name="WallNegX_shape" lunit="cm" x="0.2" y="1000.0" z="1000.0"/>
+    <box name="WallPosY_shape" lunit="cm" x="1000.0" y="0.2" z="1000.0"/>
+    <box name="WallNegY_shape" lunit="cm" x="1000.0" y="0.2" z="1000.0"/>
+    <box name="World_shape" lunit="cm" x="1200.0" y="1200.0" z="1200.0"/>
+  </solids>
+  <structure>
+    <volume name="WallTop_LV">
+      <materialref ref="WallMaterial"/>
+      <solidref ref="WallTop_shape"/>
+      <auxiliary auxtype="OpSurfaceModel" auxvalue="glisur"/>
+      <auxiliary auxtype="OpSurfaceType" auxvalue="dielectric_metal"/>
+      <auxiliary auxtype="OpSurfaceFinish" auxvalue="polished"/>
+      <auxiliary auxtype="OpReflectivity" auxvalue="0.0"/>
+      <auxiliary auxtype="OpEfficiency" auxvalue="0.0"/>
+    </volume>
+    <volume name="WallBottom_LV">
+      <materialref ref="WallMaterial"/>
+      <solidref ref="WallBottom_shape"/>
+      <auxiliary auxtype="OpSurfaceModel" auxvalue="glisur"/>
+      <auxiliary auxtype="OpSurfaceType" auxvalue="dielectric_metal"/>
+      <auxiliary auxtype="OpSurfaceFinish" auxvalue="polished"/>
+      <auxiliary auxtype="OpReflectivity" auxvalue="0.0"/>
+      <auxiliary auxtype="OpEfficiency" auxvalue="0.0"/>
+    </volume>
+    <volume name="WallPosX_LV">
+      <materialref ref="WallMaterial"/>
+      <solidref ref="WallPosX_shape"/>
+      <auxiliary auxtype="OpSurfaceModel" auxvalue="unified"/>
+      <auxiliary auxtype="OpSurfaceType" auxvalue="dielectric_metal"/>
+      <auxiliary auxtype="OpSurfaceFinish" auxvalue="ground"/>
+      <auxiliary auxtype="OpReflectivity" auxvalue="0.9"/>
+    </volume>
+    <volume name="WallNegX_LV">
+      <materialref ref="WallMaterial"/>
+      <solidref ref="WallNegX_shape"/>
+      <auxiliary auxtype="OpSurfaceModel" auxvalue="unified"/>
+      <auxiliary auxtype="OpSurfaceType" auxvalue="dielectric_metal"/>
+      <auxiliary auxtype="OpSurfaceFinish" auxvalue="ground"/>
+      <auxiliary auxtype="OpReflectivity" auxvalue="0.9"/>
+    </volume>
+    <volume name="WallPosY_LV">
+      <materialref ref="WallMaterial"/>
+      <solidref ref="WallPosY_shape"/>
+      <auxiliary auxtype="OpSurfaceModel" auxvalue="unified"/>
+      <auxiliary auxtype="OpSurfaceType" auxvalue="dielectric_metal"/>
+      <auxiliary auxtype="OpSurfaceFinish" auxvalue="ground"/>
+      <auxiliary auxtype="OpReflectivity" auxvalue="0.9"/>
+    </volume>
+    <volume name="WallNegY_LV">
+      <materialref ref="WallMaterial"/>
+      <solidref ref="WallNegY_shape"/>
+      <auxiliary auxtype="OpSurfaceModel" auxvalue="unified"/>
+      <auxiliary auxtype="OpSurfaceType" auxvalue="dielectric_metal"/>
+      <auxiliary auxtype="OpSurfaceFinish" auxvalue="ground"/>
+      <auxiliary auxtype="OpReflectivity" auxvalue="0.9"/>
+    </volume>
+    <volume name="PhotonSensor_LV">
+      <materialref ref="SensorMaterial"/>
+      <solidref ref="PhotonSensor_shape"/>
+      <auxiliary auxtype="SensDet" auxvalue="PhotonDetector"/>
+      <auxiliary auxtype="OpSurfaceModel" auxvalue="glisur"/>
+      <auxiliary auxtype="OpSurfaceType" auxvalue="dielectric_metal"/>
+      <auxiliary auxtype="OpSurfaceFinish" auxvalue="polished"/>
+      <auxiliary auxtype="OpReflectivity" auxvalue="0.0"/>
+      <auxiliary auxtype="OpEfficiency" auxvalue="1.0"/>
+    </volume>
+    <volume name="Cathode_LV">
+      <materialref ref="CathodeMaterial"/>
+      <solidref ref="Cathode_shape"/>
+      <physvol>
+        <volumeref ref="PhotonSensor_LV"/>
+        <positionref ref="PhotonSensor_ix0_iy0_pos"/>
+        <rotationref ref="PhotonSensor_ix0_iy0_rot"/>
+      </physvol>
+      <physvol copynumber="1">
+        <volumeref ref="PhotonSensor_LV"/>
+        <positionref ref="PhotonSensor_ix0_iy1_pos"/>
+        <rotationref ref="PhotonSensor_ix0_iy1_rot"/>
+      </physvol>
+      <physvol copynumber="2">
+        <volumeref ref="PhotonSensor_LV"/>
+        <positionref ref="PhotonSensor_ix0_iy2_pos"/>
+        <rotationref ref="PhotonSensor_ix0_iy2_rot"/>
+      </physvol>
+      <physvol copynumber="3">
+        <volumeref ref="PhotonSensor_LV"/>
+        <positionref ref="PhotonSensor_ix0_iy3_pos"/>
+        <rotationref ref="PhotonSensor_ix0_iy3_rot"/>
+      </physvol>
+      <physvol copynumber="4">
+        <volumeref ref="PhotonSensor_LV"/>
+        <positionref ref="PhotonSensor_ix0_iy4_pos"/>
+        <rotationref ref="PhotonSensor_ix0_iy4_rot"/>
+      </physvol>
+      <physvol copynumber="5">
+        <volumeref ref="PhotonSensor_LV"/>
+        <positionref ref="PhotonSensor_ix1_iy0_pos"/>
+        <rotationref ref="PhotonSensor_ix1_iy0_rot"/>
+      </physvol>
+      <physvol copynumber="6">
+        <volumeref ref="PhotonSensor_LV"/>
+        <positionref ref="PhotonSensor_ix1_iy1_pos"/>
+        <rotationref ref="PhotonSensor_ix1_iy1_rot"/>
+      </physvol>
+      <physvol copynumber="7">
+        <volumeref ref="PhotonSensor_LV"/>
+        <positionref ref="PhotonSensor_ix1_iy2_pos"/>
+        <rotationref ref="PhotonSensor_ix1_iy2_rot"/>
+      </physvol>
+      <physvol copynumber="8">
+        <volumeref ref="PhotonSensor_LV"/>
+        <positionref ref="PhotonSensor_ix1_iy3_pos"/>
+        <rotationref ref="PhotonSensor_ix1_iy3_rot"/>
+      </physvol>
+      <physvol copynumber="9">
+        <volumeref ref="PhotonSensor_LV"/>
+        <positionref ref="PhotonSensor_ix1_iy4_pos"/>
+        <rotationref ref="PhotonSensor_ix1_iy4_rot"/>
+      </physvol>
+      <physvol copynumber="10">
+        <volumeref ref="PhotonSensor_LV"/>
+        <positionref ref="PhotonSensor_ix2_iy0_pos"/>
+        <rotationref ref="PhotonSensor_ix2_iy0_rot"/>
+      </physvol>
+      <physvol copynumber="11">
+        <volumeref ref="PhotonSensor_LV"/>
+        <positionref ref="PhotonSensor_ix2_iy1_pos"/>
+        <rotationref ref="PhotonSensor_ix2_iy1_rot"/>
+      </physvol>
+      <physvol copynumber="12">
+        <volumeref ref="PhotonSensor_LV"/>
+        <positionref ref="PhotonSensor_ix2_iy2_pos"/>
+        <rotationref ref="PhotonSensor_ix2_iy2_rot"/>
+      </physvol>
+      <physvol copynumber="13">
+        <volumeref ref="PhotonSensor_LV"/>
+        <positionref ref="PhotonSensor_ix2_iy3_pos"/>
+        <rotationref ref="PhotonSensor_ix2_iy3_rot"/>
+      </physvol>
+      <physvol copynumber="14">
+        <volumeref ref="PhotonSensor_LV"/>
+        <positionref ref="PhotonSensor_ix2_iy4_pos"/>
+        <rotationref ref="PhotonSensor_ix2_iy4_rot"/>
+      </physvol>
+      <physvol copynumber="15">
+        <volumeref ref="PhotonSensor_LV"/>
+        <positionref ref="PhotonSensor_ix3_iy0_pos"/>
+        <rotationref ref="PhotonSensor_ix3_iy0_rot"/>
+      </physvol>
+      <physvol copynumber="16">
+        <volumeref ref="PhotonSensor_LV"/>
+        <positionref ref="PhotonSensor_ix3_iy1_pos"/>
+        <rotationref ref="PhotonSensor_ix3_iy1_rot"/>
+      </physvol>
+      <physvol copynumber="17">
+        <volumeref ref="PhotonSensor_LV"/>
+        <positionref ref="PhotonSensor_ix3_iy2_pos"/>
+        <rotationref ref="PhotonSensor_ix3_iy2_rot"/>
+      </physvol>
+      <physvol copynumber="18">
+        <volumeref ref="PhotonSensor_LV"/>
+        <positionref ref="PhotonSensor_ix3_iy3_pos"/>
+        <rotationref ref="PhotonSensor_ix3_iy3_rot"/>
+      </physvol>
+      <physvol copynumber="19">
+        <volumeref ref="PhotonSensor_LV"/>
+        <positionref ref="PhotonSensor_ix3_iy4_pos"/>
+        <rotationref ref="PhotonSensor_ix3_iy4_rot"/>
+      </physvol>
+      <physvol copynumber="20">
+        <volumeref ref="PhotonSensor_LV"/>
+        <positionref ref="PhotonSensor_ix4_iy0_pos"/>
+        <rotationref ref="PhotonSensor_ix4_iy0_rot"/>
+      </physvol>
+      <physvol copynumber="21">
+        <volumeref ref="PhotonSensor_LV"/>
+        <positionref ref="PhotonSensor_ix4_iy1_pos"/>
+        <rotationref ref="PhotonSensor_ix4_iy1_rot"/>
+      </physvol>
+      <physvol copynumber="22">
+        <volumeref ref="PhotonSensor_LV"/>
+        <positionref ref="PhotonSensor_ix4_iy2_pos"/>
+        <rotationref ref="PhotonSensor_ix4_iy2_rot"/>
+      </physvol>
+      <physvol copynumber="23">
+        <volumeref ref="PhotonSensor_LV"/>
+        <positionref ref="PhotonSensor_ix4_iy3_pos"/>
+        <rotationref ref="PhotonSensor_ix4_iy3_rot"/>
+      </physvol>
+      <physvol copynumber="24">
+        <volumeref ref="PhotonSensor_LV"/>
+        <positionref ref="PhotonSensor_ix4_iy4_pos"/>
+        <rotationref ref="PhotonSensor_ix4_iy4_rot"/>
+      </physvol>
+      <auxiliary auxtype="OpSurfaceModel" auxvalue="glisur"/>
+      <auxiliary auxtype="OpSurfaceType" auxvalue="dielectric_dielectric"/>
+      <auxiliary auxtype="OpSurfaceFinish" auxvalue="polished"/>
+      <auxiliary auxtype="OpReflectivity" auxvalue="0.0"/>
+      <auxiliary auxtype="OpTransmittance" auxvalue="1.0"/>
+    </volume>
+    <volume name="Detector_LV">
+      <materialref ref="LiquidArgon"/>
+      <solidref ref="Detector_shape"/>
+      <physvol>
+        <volumeref ref="WallTop_LV"/>
+        <positionref ref="WallTop_pos"/>
+        <rotationref ref="WallTop_rot"/>
+      </physvol>
+      <physvol>
+        <volumeref ref="WallBottom_LV"/>
+        <positionref ref="WallBottom_pos"/>
+        <rotationref ref="WallBottom_rot"/>
+      </physvol>
+      <physvol>
+        <volumeref ref="WallPosX_LV"/>
+        <positionref ref="WallPosX_pos"/>
+        <rotationref ref="WallPosX_rot"/>
+      </physvol>
+      <physvol>
+        <volumeref ref="WallNegX_LV"/>
+        <positionref ref="WallNegX_pos"/>
+        <rotationref ref="WallNegX_rot"/>
+      </physvol>
+      <physvol>
+        <volumeref ref="WallPosY_LV"/>
+        <positionref ref="WallPosY_pos"/>
+        <rotationref ref="WallPosY_rot"/>
+      </physvol>
+      <physvol>
+        <volumeref ref="WallNegY_LV"/>
+        <positionref ref="WallNegY_pos"/>
+        <rotationref ref="WallNegY_rot"/>
+      </physvol>
+      <physvol>
+        <volumeref ref="Cathode_LV"/>
+        <positionref ref="Cathode_pos"/>
+        <rotationref ref="Cathode_rot"/>
+      </physvol>
+    </volume>
+    <volume name="World_LV">
+      <materialref ref="Vacuum"/>
+      <solidref ref="World_shape"/>
+      <physvol>
+        <volumeref ref="Detector_LV"/>
+        <positionref ref="Detector_pos"/>
+        <rotationref ref="Detector_rot"/>
+      </physvol>
+    </volume>
+  </structure>
+  <setup name="Default" version="0">
+    <world ref="World_LV"/>
+  </setup>
+</gdml>

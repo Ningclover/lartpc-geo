@@ -1,0 +1,30 @@
+# Geant4 visualization macro for lartpc.gdml
+# Exports geometry to VRML (.wrl) and ASCII tree — no display required.
+#
+# Run with:
+#   cd lartpc-geo
+#   edep-sim -g lartpc.gdml vis.mac
+#
+# Outputs:
+#   g4_00.wrl   — open with a VRML viewer (e.g. view3dscene, meshlab, online)
+#   tree.txt    — plain-text volume hierarchy
+
+# ── 1. ASCII volume tree (no display needed) ──────────────────────────────────
+/vis/open ATree
+/vis/drawVolume
+/vis/ASCIITree/verbose 2
+/vis/viewer/flush
+
+# ── 2. VRML2 file export ──────────────────────────────────────────────────────
+/vis/open VRML2FILE
+/vis/drawVolume
+
+/vis/geometry/set/visibility World_LV   0 false
+/vis/geometry/set/visibility Detector_LV 0 true
+/vis/geometry/set/visibility Cathode_LV  0 true
+/vis/geometry/set/forceWireframe Detector_LV 0 true
+/vis/geometry/set/colour Detector_LV 0 0 1 1 1
+/vis/geometry/set/colour Cathode_LV  0 1 1 0 1
+
+/vis/viewer/set/viewpointThetaPhi 70 20
+/vis/viewer/flush

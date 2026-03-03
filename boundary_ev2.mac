@@ -1,0 +1,10 @@
+# Event 2: toward WallPosX (+x)
+# Start 50 mm from inner wall face (inner face at x=+4999mm → start at x=+4949mm)
+/generator/kinematics/set gps
+/generator/add
+/gps/particle opticalphoton
+/gps/energy 9.6863 eV
+/gps/pos/type Point
+/gps/pos/centre 4949 0 0 mm
+/gps/polarization 0 1 0
+/gps/direction 1 0 0

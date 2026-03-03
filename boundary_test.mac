@@ -1,0 +1,20 @@
+##########################################################################
+# boundary_test.mac
+#
+# edep-sim fires the GPS source once per event driven by -e N.
+# Multiple /run/beamOn calls are not supported.
+# This file fires 8 photons in a single run (all using the same GPS
+# config), so we instead use a bash wrapper to run 8 separate 1-event
+# jobs.  See boundary_test.sh for the driver script.
+#
+# This .mac sets up one photon per event; the direction / position are
+# overridden per run by sourcing a small per-shot snippet.
+# The files boundary_test_ev0.mac … boundary_test_ev7.mac each hold
+# the per-shot GPS settings plus a final /run/beamOn 1 call.
+##########################################################################
+
+/generator/kinematics/set gps
+/generator/add
+/gps/particle opticalphoton
+/gps/energy 9.6863 eV
+/gps/ang/type fixed

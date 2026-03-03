@@ -1,0 +1,10 @@
+# Event 1: toward WallBottom (-z)
+# Start 50 mm from inner wall face (inner face at z=-4999mm → start at z=-4949mm)
+/generator/kinematics/set gps
+/generator/add
+/gps/particle opticalphoton
+/gps/energy 9.6863 eV
+/gps/pos/type Point
+/gps/pos/centre 0 0 -4949 mm
+/gps/polarization 1 0 0
+/gps/direction 0 0 -1

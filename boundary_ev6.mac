@@ -1,0 +1,10 @@
+# Event 6: toward Cathode plane (z=0, thickness 1cm, so face at z=+5mm)
+# Start 50 mm above cathode face: z = +55 mm
+/generator/kinematics/set gps
+/generator/add
+/gps/particle opticalphoton
+/gps/energy 9.6863 eV
+/gps/pos/type Point
+/gps/pos/centre 0 0 55 mm
+/gps/polarization 1 0 0
+/gps/direction 0 0 -1

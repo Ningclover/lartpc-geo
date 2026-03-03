@@ -1,0 +1,44 @@
+##########################################################################
+# Generate 128 nm scintillation-wavelength optical photons in liquid argon.
+#
+# Each event fires one optical photon from a random point uniformly
+# distributed inside the 10 m x 10 m x 10 m liquid argon detector volume.
+# The photon is emitted isotropically.
+#
+# 128 nm  →  E = hc/λ = 1239.84 eV / 128 nm = 9.6863 eV = 9.6863e-6 MeV
+#
+# Run with:
+#   edep-sim -u \
+#            -g lartpc-geo/lartpc.gdml \
+#            -o photon_hits.root \
+#            -e 1000 \
+#            lartpc-geo/optical_photons.mac
+##########################################################################
+
+# Tell edep-sim to use the GPS kinematics factory and register one vertex.
+/generator/kinematics/set gps
+/generator/add
+
+# Particle type: optical photon
+/gps/particle opticalphoton
+
+# Energy corresponding to 128 nm (LAr scintillation peak)
+/gps/energy 9.6863 eV
+
+# Polarisation is required for optical photons in Geant4.
+# Setting a fixed linear polarisation; the direction is randomised below
+# so this does not bias the physics.
+/gps/polarization 1 0 0
+
+# --- Position: uniformly random inside the LAr detector box ---
+# The detector is centred at the world origin.
+# Half-dimensions: 5000 mm x 5000 mm x 5000 mm  (10 m cube)
+/gps/pos/type Volume
+/gps/pos/shape Para
+/gps/pos/centre 0 0 0 mm
+/gps/pos/halfx 4999 mm
+/gps/pos/halfy 4999 mm
+/gps/pos/halfz 4999 mm
+
+# --- Direction: isotropic ---
+/gps/ang/type iso
