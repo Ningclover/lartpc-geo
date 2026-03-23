@@ -108,9 +108,9 @@ class Builder(gegede.builder.Builder):
         walls = [
             # name,   dx,          dy,          dz,       pos_x,   pos_y,   pos_z,     params
             ("WallTop",    self.dx,     self.dy,     WALL_DZ,
-             Q("0m"), Q("0m"),  self.dz - WALL_DZ,   abs_params),
+             Q("0m"), Q("0m"),  self.dz - WALL_DZ,   side_params),
             ("WallBottom", self.dx,     self.dy,     WALL_DZ,
-             Q("0m"), Q("0m"), -(self.dz - WALL_DZ), abs_params),
+             Q("0m"), Q("0m"), -(self.dz - WALL_DZ), side_params),
             ("WallPosX",   WALL_DZ,     self.dy,     self.dz,
               self.dx - WALL_DZ, Q("0m"), Q("0m"),   side_params),
             ("WallNegX",   WALL_DZ,     self.dy,     self.dz,

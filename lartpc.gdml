@@ -137,20 +137,18 @@
     <volume name="WallTop_LV">
       <materialref ref="WallMaterial"/>
       <solidref ref="WallTop_shape"/>
-      <auxiliary auxtype="OpSurfaceModel" auxvalue="glisur"/>
+      <auxiliary auxtype="OpSurfaceModel" auxvalue="unified"/>
       <auxiliary auxtype="OpSurfaceType" auxvalue="dielectric_metal"/>
-      <auxiliary auxtype="OpSurfaceFinish" auxvalue="polished"/>
-      <auxiliary auxtype="OpReflectivity" auxvalue="0.0"/>
-      <auxiliary auxtype="OpEfficiency" auxvalue="0.0"/>
+      <auxiliary auxtype="OpSurfaceFinish" auxvalue="ground"/>
+      <auxiliary auxtype="OpReflectivity" auxvalue="0.9"/>
     </volume>
     <volume name="WallBottom_LV">
       <materialref ref="WallMaterial"/>
       <solidref ref="WallBottom_shape"/>
-      <auxiliary auxtype="OpSurfaceModel" auxvalue="glisur"/>
+      <auxiliary auxtype="OpSurfaceModel" auxvalue="unified"/>
       <auxiliary auxtype="OpSurfaceType" auxvalue="dielectric_metal"/>
-      <auxiliary auxtype="OpSurfaceFinish" auxvalue="polished"/>
-      <auxiliary auxtype="OpReflectivity" auxvalue="0.0"/>
-      <auxiliary auxtype="OpEfficiency" auxvalue="0.0"/>
+      <auxiliary auxtype="OpSurfaceFinish" auxvalue="ground"/>
+      <auxiliary auxtype="OpReflectivity" auxvalue="0.9"/>
     </volume>
     <volume name="WallPosX_LV">
       <materialref ref="WallMaterial"/>
@@ -185,17 +183,12 @@
       <auxiliary auxtype="OpReflectivity" auxvalue="0.9"/>
     </volume>
     <volume name="PhotonSensor_LV">
-      <materialref ref="SensorMaterial"/>
+      <materialref ref="LiquidArgon"/>
       <solidref ref="PhotonSensor_shape"/>
       <auxiliary auxtype="SensDet" auxvalue="PhotonDetector"/>
-      <auxiliary auxtype="OpSurfaceModel" auxvalue="glisur"/>
-      <auxiliary auxtype="OpSurfaceType" auxvalue="dielectric_metal"/>
-      <auxiliary auxtype="OpSurfaceFinish" auxvalue="polished"/>
-      <auxiliary auxtype="OpReflectivity" auxvalue="0.0"/>
-      <auxiliary auxtype="OpEfficiency" auxvalue="1.0"/>
     </volume>
     <volume name="Cathode_LV">
-      <materialref ref="CathodeMaterial"/>
+      <materialref ref="LiquidArgon"/>
       <solidref ref="Cathode_shape"/>
       <physvol>
         <volumeref ref="PhotonSensor_LV"/>
@@ -322,11 +315,6 @@
         <positionref ref="PhotonSensor_ix4_iy4_pos"/>
         <rotationref ref="PhotonSensor_ix4_iy4_rot"/>
       </physvol>
-      <auxiliary auxtype="OpSurfaceModel" auxvalue="glisur"/>
-      <auxiliary auxtype="OpSurfaceType" auxvalue="dielectric_dielectric"/>
-      <auxiliary auxtype="OpSurfaceFinish" auxvalue="polished"/>
-      <auxiliary auxtype="OpReflectivity" auxvalue="0.0"/>
-      <auxiliary auxtype="OpTransmittance" auxvalue="1.0"/>
     </volume>
     <volume name="Detector_LV">
       <materialref ref="LiquidArgon"/>

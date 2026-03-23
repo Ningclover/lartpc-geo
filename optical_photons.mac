@@ -1,9 +1,12 @@
 ##########################################################################
 # Generate 128 nm scintillation-wavelength optical photons in liquid argon.
 #
-# Each event fires one optical photon from a random point uniformly
-# distributed inside the 10 m x 10 m x 10 m liquid argon detector volume.
-# The photon is emitted isotropically.
+# Each event fires 100 optical photons from random points uniformly
+# distributed inside a cuboid source region:
+#   half-x =    50 mm (100 mm full width)
+#   half-y =   500 mm (1 m full width)
+#   half-z =   500 mm (1 m full width)
+# The photons are emitted isotropically.
 #
 # 128 nm  →  E = hc/λ = 1239.84 eV / 128 nm = 9.6863 eV = 9.6863e-6 MeV
 #
@@ -22,6 +25,9 @@
 # Particle type: optical photon
 /gps/particle opticalphoton
 
+# Fire 100 photons per event from the same source definition.
+/gps/number 1
+
 # Energy corresponding to 128 nm (LAr scintillation peak)
 /gps/energy 9.6863 eV
 
@@ -30,15 +36,14 @@
 # so this does not bias the physics.
 /gps/polarization 1 0 0
 
-# --- Position: uniformly random inside the LAr detector box ---
-# The detector is centred at the world origin.
-# Half-dimensions: 5000 mm x 5000 mm x 5000 mm  (10 m cube)
+# --- Position: uniformly random inside the cuboid source region ---
+# half-x = 50 mm (100 mm full width), half-y = 500 mm, half-z = 500 mm
 /gps/pos/type Volume
 /gps/pos/shape Para
 /gps/pos/centre 0 0 0 mm
-/gps/pos/halfx 4999 mm
-/gps/pos/halfy 4999 mm
-/gps/pos/halfz 4999 mm
+/gps/pos/halfx 50 mm
+/gps/pos/halfy 500 mm
+/gps/pos/halfz 500 mm
 
 # --- Direction: isotropic ---
 /gps/ang/type iso

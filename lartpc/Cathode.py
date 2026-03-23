@@ -11,10 +11,10 @@ class Builder(gegede.builder.Builder):
     embedded into (placed as daughters of) the cathode volume, uniformly
     distributed over its face.
 
-    The cathode material is set to "transparent" via optical surface
-    auxiliary parameters (dielectric_dielectric with reflectivity=0 and
-    transmittance=1) so that photons pass through freely.  This can be
-    changed in future without modifying the geometry description.
+    The cathode material is set to LiquidArgon (same as the world volume)
+    so that no optical boundary exists and photons pass through freely.
+    To add partial reflection/absorption in future, change the material to
+    a distinct one with RINDEX defined and use dielectric_dielectric surface.
 
     Configuration parameters
     ------------------------
@@ -28,7 +28,7 @@ class Builder(gegede.builder.Builder):
                   dx=Q("5m"),
                   dy=Q("5m"),
                   dz=Q("0.5cm"),
-                  material="CathodeMaterial",
+                  material="LiquidArgon",
                   nx=5,
                   ny=5,
                   **kwds):
@@ -51,16 +51,17 @@ class Builder(gegede.builder.Builder):
                                        material=self.material,
                                        shape=shape)
 
-        # Optical surface: totally transparent (pass-through).
-        # dielectric_dielectric with reflectivity=0 means all photons
-        # are transmitted regardless of incidence angle.
-        # Change "OpReflectivity" to a non-zero value in future to add
-        # partial reflection from the cathode.
-        volume.params.append(("OpSurfaceModel",    "glisur"))
-        volume.params.append(("OpSurfaceType",     "dielectric_dielectric"))
-        volume.params.append(("OpSurfaceFinish",   "polished"))
-        volume.params.append(("OpReflectivity",    "0.0"))
-        volume.params.append(("OpTransmittance",   "1.0"))
+
+        # Optical surface parameters commented out: cathode is LiquidArgon,
+        # same material as the world, so no boundary exists and photons
+        # pass through 100% with no reflection or absorption.
+        # Uncomment and switch to dielectric_dielectric + distinct material
+        # if partial reflection is needed in future.
+        # volume.params.append(("OpSurfaceModel",    "unified"))
+        # volume.params.append(("OpSurfaceType",     "dielectric_dielectric"))
+        # volume.params.append(("OpSurfaceFinish",   "polished"))
+        # volume.params.append(("OpReflectivity",    "0.1"))
+        # volume.params.append(("OpTransmittance",   "0.9"))
 
         for n, v in self.otherKeywords.items():
             volume.params.append((n, v))
