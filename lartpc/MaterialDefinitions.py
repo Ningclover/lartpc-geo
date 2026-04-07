@@ -104,11 +104,25 @@ def DefineMaterials(geom):
 
     # ------------------------------------------------------------------
     # Photon sensor material -- silicon (SiPM-like active face).
-    # Optical surface set to total absorption via auxiliary params.
+    #
+    # RINDEX is required so that G4OpBoundaryProcess can compute the
+    # LAr → SensorMaterial optical boundary.  Without it, Geant4 aborts
+    # with "Material has no refractive index".
+    #
+    # Silicon refractive index at 128 nm (9.686 eV) is ~1.7 (real part).
+    # Two bracketing energy points are required by Geant4.
+    # The high index relative to LAr (1.232) means photons are strongly
+    # refracted at the boundary; combined with zero reflectivity set on
+    # the SurfaceDetector volume (handled by SurfaceSD), all photons
+    # that reach the sensor face are recorded as hits.
     # ------------------------------------------------------------------
     geom.matter.Mixture("SensorMaterial",
                         density="2.329*g/cc",
-                        components=(("Elem_silicon", 1.0),))
+                        components=(("Elem_silicon", 1.0),),
+                        properties=(
+                            ("RINDEX", [9.586e-3, 1.7,
+                                        9.786e-3, 1.7]),
+                        ))
 
     # ------------------------------------------------------------------
     # Wall material -- thin structural walls of the detector vessel.

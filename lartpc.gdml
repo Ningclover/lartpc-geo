@@ -70,6 +70,7 @@
     <matrix name="LiquidArgon_RINDEX_VALUE" coldim="2" values="0.009586 1.232 0.009786 1.232"/>
     <matrix name="LiquidArgon_ABSLENGTH_VALUE" coldim="2" values="0.009586 10000.0 0.009786 10000.0"/>
     <matrix name="LiquidArgon_RAYLEIGH_VALUE" coldim="2" values="0.009586 900.0 0.009786 900.0"/>
+    <matrix name="SensorMaterial_RINDEX_VALUE" coldim="2" values="0.009586 1.7 0.009786 1.7"/>
     <position name="center"/>
     <rotation name="identity"/>
   </define>
@@ -114,6 +115,7 @@
     <material name="SensorMaterial" formula="">
       <D value="2.329"/>
       <fraction ref="Elem_silicon" n="1.0"/>
+      <property name="RINDEX" ref="SensorMaterial_RINDEX_VALUE"/>
     </material>
     <material name="WallMaterial" formula="">
       <D value="7.874"/>
@@ -183,9 +185,14 @@
       <auxiliary auxtype="OpReflectivity" auxvalue="0.9"/>
     </volume>
     <volume name="PhotonSensor_LV">
-      <materialref ref="LiquidArgon"/>
+      <materialref ref="SensorMaterial"/>
       <solidref ref="PhotonSensor_shape"/>
-      <auxiliary auxtype="SensDet" auxvalue="PhotonDetector"/>
+      <auxiliary auxtype="OpSurfaceModel" auxvalue="glisur"/>
+      <auxiliary auxtype="OpSurfaceType" auxvalue="dielectric_metal"/>
+      <auxiliary auxtype="OpSurfaceFinish" auxvalue="polished"/>
+      <auxiliary auxtype="OpReflectivity" auxvalue="0.0"/>
+      <auxiliary auxtype="OpEfficiency" auxvalue="1.0"/>
+      <auxiliary auxtype="SurfaceDetector" auxvalue="PhotonDetector"/>
     </volume>
     <volume name="Cathode_LV">
       <materialref ref="LiquidArgon"/>

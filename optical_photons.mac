@@ -1,14 +1,22 @@
 ##########################################################################
+# optical_photons.mac  (edep-sim-working / upstream SurfaceSD version)
+#
 # Generate 128 nm scintillation-wavelength optical photons in liquid argon.
+# Photons are tracked by Geant4 optical physics and recorded when they
+# cross the LAr → SensorMaterial boundary of a PhotonSensor tile, via
+# EDepSim::SurfaceSD (TG4PhotonHit in the output tree).
 #
-# Each event fires 100 optical photons from random points uniformly
-# distributed inside a cuboid source region:
-#   half-x =    50 mm (100 mm full width)
-#   half-y =   500 mm (1 m full width)
-#   half-z =   500 mm (1 m full width)
-# The photons are emitted isotropically.
+# Key differences from the optic-gpu version:
+#   - Uses upstream EDepSim::SurfaceSD (not PhotonSD).
+#   - /process/optical/boundary/setInvokeSD true is REQUIRED so that
+#     G4OpBoundaryProcess calls ProcessHits on the SurfaceDetector volumes.
+#   - Physics list must include optical physics (QGSP_BERT + optical).
 #
-# 128 nm  →  E = hc/λ = 1239.84 eV / 128 nm = 9.6863 eV = 9.6863e-6 MeV
+# GPS source region:
+#   half-x = 50 mm  (100 mm full width, well inside the ±5 m LAr box)
+#   half-y = 500 mm
+#   half-z = 500 mm
+# 128 nm → E = hc/λ = 1239.84 eV·nm / 128 nm = 9.6863 eV
 #
 # Run with:
 #   edep-sim -u \
@@ -18,30 +26,53 @@
 #            lartpc-geo/optical_photons.mac
 ##########################################################################
 
-# Tell edep-sim to use the GPS kinematics factory and register one vertex.
+# ------------------------------------------------------------------
+# Physics list -- must include optical photon processes.
+# QGSP_BERT is the edep-sim default; adding optical processes enables
+# Rayleigh, absorption, and boundary physics for optical photons.
+# ------------------------------------------------------------------
+# /edep/phys/list QGSP_BERT  -- not a valid macro command in upstream edep-sim;
+#   physics list (including G4OpticalPhysics) is set at construction time.
+# /process/optical/cerenkov/setMaxPhotons    0   -- disable Cerenkov
+# /process/optical/scintillation/setYieldFactor 0  -- disable scintillation
+
+# REQUIRED for SurfaceSD: tell G4OpBoundaryProcess to invoke the
+# sensitive detector's ProcessHits when a photon hits a boundary.
+/process/optical/boundary/setInvokeSD true
+
+# Save optical photon trajectories (needed to debug hit recording)
+/edep/db/set/savePhotonTraj true
+
+
+# ------------------------------------------------------------------
+# Generator: GPS single-vertex optical photon source
+# ------------------------------------------------------------------
 /generator/kinematics/set gps
 /generator/add
 
 # Particle type: optical photon
 /gps/particle opticalphoton
 
-# Fire 100 photons per event from the same source definition.
+# One photon fired per GPS call; edep-sim -e N runs N events.
 /gps/number 1
 
-# Energy corresponding to 128 nm (LAr scintillation peak)
+# Energy corresponding to 128 nm (LAr VUV scintillation peak)
 /gps/energy 9.6863 eV
 
-# Polarisation is required for optical photons in Geant4.
-# Setting a fixed linear polarisation; the direction is randomised below
-# so this does not bias the physics.
+# Polarisation is mandatory for Geant4 optical photons.
+# A fixed linear polarisation is fine; the isotropic direction
+# sampling below de-correlates it from the propagation direction.
 /gps/polarization 1 0 0
 
-# --- Position: uniformly random inside the cuboid source region ---
-# half-x = 50 mm (100 mm full width), half-y = 500 mm, half-z = 500 mm
+# --- Position: uniformly random inside a cuboid source region ---
+# Shifted to z=1000 mm (1 m from cathode plane) so photons are always
+# generated in pure LiquidArgon, never inside a PhotonSensor tile.
+# The sensors sit at z=0 ± 5 mm; keeping halfz=500 mm centred at z=1000 mm
+# means the source spans z=[500,1500] mm -- well clear of the cathode.
 /gps/pos/type Volume
 /gps/pos/shape Para
-/gps/pos/centre 0 0 0 mm
-/gps/pos/halfx 50 mm
+/gps/pos/centre 0 0 1000 mm
+/gps/pos/halfx  50 mm
 /gps/pos/halfy 500 mm
 /gps/pos/halfz 500 mm
 
